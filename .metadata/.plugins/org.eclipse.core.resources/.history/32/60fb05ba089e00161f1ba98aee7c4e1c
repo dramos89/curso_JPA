@@ -1,0 +1,22 @@
+package br.java.curso.service;
+
+import javax.persistence.EntityManager;
+
+import br.java.curso.jpa.EntityManagerUtil;
+
+public class GenericService<T> {
+	
+	public void salvar(T entidade){
+		EntityManager em = EntityManagerUtil().createEntityManager();
+		try {
+			em.getTransaction().begin();
+			em.persist(entidade);
+			em.getTransaction().commit();
+		} catch (Exception e) {
+			em.getTransaction().rollback();
+			// TODO: handle exception
+		} finally {
+			em.close();
+		}
+	}
+}

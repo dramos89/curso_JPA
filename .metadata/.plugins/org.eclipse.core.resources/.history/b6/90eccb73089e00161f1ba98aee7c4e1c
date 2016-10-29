@@ -1,0 +1,5 @@
+package br.java.curso.service;
+
+public class GenericService {
+
+}

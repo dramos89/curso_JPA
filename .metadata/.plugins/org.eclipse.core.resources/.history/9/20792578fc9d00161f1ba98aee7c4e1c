@@ -1,0 +1,16 @@
+package br.java.curso.pessoa;
+
+import org.junit.AfterClass;
+
+import br.java.curso.jpa.EntityManagerUtil;
+
+public class PessoaServiceTest {
+
+	@AfterClass
+	public static void close() {
+		EntityManagerUtil.close();
+	}
+
+	// @Test
+	// public void salvarBancoTeste(){
+}

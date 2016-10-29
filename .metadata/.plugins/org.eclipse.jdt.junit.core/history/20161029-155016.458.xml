@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PessoaServiceTest" project="curso-jpa" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="br.java.curso.pessoa.PessoaServiceTest" time="1.924">
+    <testcase name="salvarBancoTeste" classname="br.java.curso.pessoa.PessoaServiceTest" time="1.853"/>
+    <testcase name="compararNomes" classname="br.java.curso.pessoa.PessoaServiceTest" time="0.046"/>
+    <testcase name="buscarPessoaPorIdTeste" classname="br.java.curso.pessoa.PessoaServiceTest" time="0.024"/>
+  </testsuite>
+</testrun>

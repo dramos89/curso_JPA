@@ -1,0 +1,32 @@
+package br.java.curso.banco;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import org.junit.Test;
+
+public class BancoTest {
+
+	@Test
+	public void salvarBancoTeste(){
+		Banco bancoJP = new Banco();
+		bancoJP.setNome("JPMorgan");
+		
+		Banco bancoInt = new Banco();
+		bancoInt.setNome("Intermedium");
+		
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("CURSO_JPA");
+		EntityManager em = factory.createEntityManager();
+		em.getTransaction().begin();
+		try{
+		em.persist(bancoJP);
+		em.persist(bancoInt);	
+		
+		em.getTransaction().commit();
+		}finally{
+			em.close();
+			factory.close();
+		}
+	}
+}

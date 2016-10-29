@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="java" project="curso-jpa" tests="9" started="9" failures="0" errors="0" ignored="0">
+  <testsuite name="br.java.curso.banco.BancoTest" time="1.832">
+    <testcase name="salvarBancoTeste" classname="br.java.curso.banco.BancoTest" time="1.799"/>
+    <testcase name="buscarPorIdTeste" classname="br.java.curso.banco.BancoTest" time="0.033"/>
+  </testsuite>
+  <testsuite name="br.java.curso.test.CalculadoraTest" time="0.001">
+    <testcase name="testarMultiplicacao" classname="br.java.curso.test.CalculadoraTest" time="0.001"/>
+    <testcase name="testarDivisao" classname="br.java.curso.test.CalculadoraTest" time="0.0"/>
+    <testcase name="testarSubtracao" classname="br.java.curso.test.CalculadoraTest" time="0.0"/>
+    <testcase name="testarSoma" classname="br.java.curso.test.CalculadoraTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="br.java.curso.pessoa.PessoaServiceTest" time="0.389">
+    <testcase name="salvarBancoTeste" classname="br.java.curso.pessoa.PessoaServiceTest" time="0.352"/>
+    <testcase name="compararNomes" classname="br.java.curso.pessoa.PessoaServiceTest" time="0.024"/>
+    <testcase name="buscarPessoaPorIdTeste" classname="br.java.curso.pessoa.PessoaServiceTest" time="0.013"/>
+  </testsuite>
+</testrun>

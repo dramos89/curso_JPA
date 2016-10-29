@@ -1,0 +1,20 @@
+package br.java.curso.banco;
+
+import javax.persistence.EntityManager;
+
+import br.java.curso.jpa.EntityManagerUtil;
+
+public class BancoService {
+
+	public void salvar(Banco banco){
+		EntityManager em = EntityManagerUtil.createEntityManager("CURSO_JPA");
+		em.getTransaction().begin();
+			em.persist(banco);
+			em.getTransaction().commit();
+			
+	}
+	
+	public Banco buscarPorId(Long id){
+		return null;
+	}
+}

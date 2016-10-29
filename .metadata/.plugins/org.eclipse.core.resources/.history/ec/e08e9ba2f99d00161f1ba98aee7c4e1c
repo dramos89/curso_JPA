@@ -1,0 +1,25 @@
+package br.java.curso.pessoa;
+
+import java.util.Date;
+
+public class Pessoa {
+
+	private String nome;
+	private Date dataNasc;
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setDataNasc(Date dataNasc) {
+		this.dataNasc = dataNasc;
+	}
+	
+	public Date getDataNasc() {
+		return dataNasc;
+	}
+}

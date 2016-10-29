@@ -1,0 +1,46 @@
+package br.java.curso.pessoa;
+
+import java.util.Date;
+
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.Test;
+
+import br.java.curso.jpa.EntityManagerUtil;
+
+public class PessoaServiceTest {
+
+	@AfterClass
+	public static void close() {
+		EntityManagerUtil.close();
+	}
+
+	@Test
+	public void salvarBancoTeste(){
+		PessoaService service = new PessoaService();
+		Pessoa pessoa = new Pessoa();
+		pessoa.setNome("Juquinha");
+
+		service.salvar(pessoa);
+
+		Assert.assertNotNull("ID da pessoa " + pessoa.getNome() + " não pode ser nulo.", pessoa.getId());
+	}
+
+	@Test
+	public void buscarPessoaPorIdTeste(){
+		PessoaService service = new PessoaService();
+		Pessoa pessoa = new Pessoa();
+
+		pessoa.setNome("Juquinha");
+		
+		service.salvar(pessoa);
+
+		Pessoa pessoaNaoEncontrada = service.buscarPorId(-1L);
+		Pessoa pessoaEncontrada = service.buscarPorId(pessoa.getId());
+
+		Assert.assertNull(pessoaNaoEncontrada);
+		Assert.assertNotNull(pessoaEncontrada);
+		Assert.assertEquals(pessoa.getNome(),pessoaEncontrada.getNome());
+
+	}
+}

@@ -1,0 +1,13 @@
+package br.java.curso.banco;
+
+import javax.persistence.Persistence;
+
+import org.junit.Test;
+
+public class BancoTest {
+
+	@Test
+	public void salvarBancoTeste(){
+		Persistence.createEntityManagerFactory("CURSO_JPA_UNIT_NAME");
+	}
+}

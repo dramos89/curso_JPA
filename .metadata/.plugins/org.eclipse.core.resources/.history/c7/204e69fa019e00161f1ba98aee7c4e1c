@@ -1,0 +1,26 @@
+package br.java.curso.pessoa;
+
+import javax.persistence.EntityManager;
+
+import br.java.curso.jpa.EntityManagerUtil;
+
+public class PessoaService {
+	public void salvar(Pessoa pessoa){
+		EntityManager em = EntityManagerUtil.createEntityManager();
+		try {
+			em.getTransaction().begin();
+			em.persist(pessoa);
+			em.getTransaction().commit();
+		} catch (Exception e) {
+			em.getTransaction().rollback();
+			// TODO: handle exception
+		} finally {
+			em.close();
+		}
+	}
+
+	public Pessoa buscarPorId(Long id){
+		EntityManager em = EntityManagerUtil.createEntityManager();
+		return em.find(Pessoa.class, id);
+	}
+}
